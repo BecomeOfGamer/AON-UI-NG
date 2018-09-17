@@ -46,6 +46,8 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/reset-css/reset.css",
+              "node_modules/flag-icon-css/css/flag-icon.min.css",
               "src/styles.scss"
             ],
             "scripts": []
