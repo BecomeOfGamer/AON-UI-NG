@@ -1,7 +1,28 @@
 {
+  "LANGUAGE": "Language",
   "LANGUAGES": {
     "EN": "English",
     "ZH-TW": "繁體中文"
+  },
+  "PLAYER": {
+    "UnitName": "UnitName",
+    "CurrentMoveSpeed": "CurrentMoveSpeed",
+    "CurrentHP": "CurrentHP",
+    "CurrentMP": "CurrentMP",
+    "CurrentAttackSpeed": "CurrentAttackSpeed",
+    "CurrentAttack": "CurrentAttack",
+    "CurrentArmor": "CurrentArmor",
+    "CurrentAttackRange": "CurrentAttackRange",
+    "AdditionStrength": "AdditionStrength",
+    "AdditionAgility": "AdditionAgility",
+    "AdditionIntelligence": "AdditionIntelligence",
+    "DeadTime": "DeadTime",
+    "BountyEXP": "BountyEXP",
+    "Strength": "Strength",
+    "Agility": "Agility",
+    "Intelligence": "Intelligence",
+    "CurrentLevel": "CurrentLevel",
+    "CurrentEXP": "CurrentEXP"
   },
   "HELLO": "Hi",
   "TITLE": "AON UI EN"
