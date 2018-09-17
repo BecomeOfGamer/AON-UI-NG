@@ -24,11 +24,13 @@ export class SettingsComponent implements OnInit {
   ngOnInit() {
     this.settings = this.settingsService.getSettings();
     this.languages = [{
-      value: 'en',
-      translate: 'LANGUAGES.EN',
+      key: 'en',
+      text: 'LANGUAGES.EN',
+      icon: 'flag-icon-en',
     }, {
-      value: 'zh-tw',
-      translate: 'LANGUAGES.ZH-TW',
+      key: 'zh-tw',
+      text: 'LANGUAGES.ZH-TW',
+      icon: 'flag-icon-tw',
     }];
   }
 

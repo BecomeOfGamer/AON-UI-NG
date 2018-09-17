@@ -1,9 +1,19 @@
-<select [(ngModel)]="settings.language" (change)="setLanguage($event)">
-  <option *ngFor="let lan of languages" [ngValue]="lan.value">{{ lan.translate | translate }}</option>
-</select>
+<div class="settings-group">
 
-<aside>
-  <span class="flag-icon flag-icon-us"></span>
-  <span class="flag-icon flag-icon-tw"></span>
-  <span class="flag-icon flag-icon-cn"></span>
-</aside>
+  <h6 class="settings-title">{{ 'LANGUAGE' | translate }}</h6>
+  <select [(ngModel)]="settings.language" (change)="setLanguage($event)">
+    <option *ngFor="let lan of languages" [ngValue]="lan.key">{{ lan.text | translate }}</option>
+  </select>
+
+  <aside>
+    <span class="flag-icon flag-icon-us"></span>
+    <span class="flag-icon flag-icon-tw"></span>
+    <span class="flag-icon flag-icon-cn"></span>
+  </aside>
+
+  <aside>
+    <p>{{ 'HELLO' | translate }}</p>
+    <div [innerHTML]="'TITLE' | translate:param"></div>
+  </aside>
+
+</div>
