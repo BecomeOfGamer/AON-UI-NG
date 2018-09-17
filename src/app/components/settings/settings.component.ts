@@ -5,6 +5,8 @@ import { Settings } from '../../models/settings';
 
 import { SettingsService } from '../../services/settings.service';
 
+import { faCoffee, faCog, faCheck } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
@@ -15,6 +17,10 @@ export class SettingsComponent implements OnInit {
   public settings: Settings;
 
   public languages: Array<Object>;
+
+  public faCoffee = faCoffee;
+  public faCog = faCog;
+  public faCheck = faCheck;
 
   constructor(
     private settingsService: SettingsService,
@@ -38,6 +44,10 @@ export class SettingsComponent implements OnInit {
     this.settings.language = event.target.value.split(' ')[1];
     this.settingsService.setLanguage(this.settings.language);
     this.translateService.use(this.settings.language);
+  }
+
+  public itemClick(value: number) {
+    console.log('click item', value);
   }
 
 }

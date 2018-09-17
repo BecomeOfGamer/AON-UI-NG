@@ -12,13 +12,18 @@ export class SettingsService {
     private http: HttpClient,
   ) { }
 
+  /**
+   * 初始化設定檔案.
+   * @returns {Settings}
+   */
   public init(): Settings {
+    // 之後要改成讀取用戶端本地檔案, 目前先寫死
     this.settings = { language: 'en' };
     return this.settings;
   }
 
   /**
-   * Set the new language and update the settingsService.
+   * 更新 model 的 settings
    * @param {string} language
    * @returns {Promise<Settings>}
    */
@@ -27,7 +32,7 @@ export class SettingsService {
   }
 
   /**
-   * Return a copy of the current settingsService.
+   * 取得設定檔案 settings
    * @returns {Settings}
    */
   public getSettings(): Settings {

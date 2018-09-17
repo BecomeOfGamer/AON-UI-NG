@@ -1,17 +1,57 @@
 <div class="settings-group">
 
-  <h6 class="settings-title">{{ 'LANGUAGE' | translate }}</h6>
+  <h5 class="settings-title">{{ 'LANGUAGE' | translate }}</h5>
   <select [(ngModel)]="settings.language" (change)="setLanguage($event)">
     <option *ngFor="let lan of languages" [ngValue]="lan.key">{{ lan.text | translate }}</option>
   </select>
 
-  <aside>
-    <span class="flag-icon flag-icon-us"></span>
-    <span class="flag-icon flag-icon-tw"></span>
-    <span class="flag-icon flag-icon-cn"></span>
-  </aside>
+  <hr>
+
+  <div class="select-group">
+    <button type="button">
+      <span>
+        <div>
+          <fa-icon [icon]="faCog"></fa-icon>
+        </div>
+        語系
+      </span>
+    </button>
+    <div class="menu">
+      <div class="item" (click)="itemClick(1)">
+        <fa-icon [icon]="faCheck"></fa-icon>
+        <span class="flag-icon flag-icon-us"></span>
+        English
+      </div>
+      <div class="item" (click)="itemClick(2)">
+        <fa-icon [icon]="faCheck"></fa-icon>
+        <span class="flag-icon flag-icon-tw"></span>
+        繁體中文
+      </div>
+    </div>
+  </div>
+
+  <hr>
 
   <aside>
+    <h6>Flag icon</h6>
+    <br />
+    <span class="flag-icon flag-icon-us"></span>&nbsp;
+    <span class="flag-icon flag-icon-tw"></span>&nbsp;
+    <span class="flag-icon flag-icon-cn"></span>&nbsp;
+  </aside>
+
+  <hr>
+
+  <aside>
+    <h6>Font awesome</h6>
+    <fa-icon [icon]="faCoffee"></fa-icon>
+    <fa-icon [icon]="faCog"></fa-icon>
+  </aside>
+
+  <hr>
+
+  <aside>
+    <h6>Translate i18n</h6>
     <p>{{ 'HELLO' | translate }}</p>
     <div [innerHTML]="'TITLE' | translate:param"></div>
   </aside>
