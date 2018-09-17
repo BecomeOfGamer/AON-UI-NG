@@ -19,8 +19,6 @@ export class SettingsComponent implements OnInit {
   public languages: Array<Object>;
 
   public faCoffee = faCoffee;
-  public faCog = faCog;
-  public faCheck = faCheck;
 
   constructor(
     private settingsService: SettingsService,
@@ -44,10 +42,6 @@ export class SettingsComponent implements OnInit {
     this.settings.language = event.target.value.split(' ')[1];
     this.settingsService.setLanguage(this.settings.language);
     this.translateService.use(this.settings.language);
-  }
-
-  public itemClick(value: number) {
-    console.log('click item', value);
   }
 
 }

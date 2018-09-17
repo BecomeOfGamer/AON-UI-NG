@@ -10,12 +10,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SettingsService } from './services/settings.service';
 
 import { AppComponent } from './app.component';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
 
-import { SettingsComponent } from './components/settings/settings.component';
-import { PlayerComponent } from './components/player/player.component';
-import { SkillComponent } from './components/skill/skill.component';
-import { SkillCDComponent } from './components/skill-cd/skill-cd.component';
-import { PlayerLifeComponent } from './components/player-life/player-life.component';
+import { SettingsComponent } from './container/settings/settings.component';
+import { PlayerComponent } from './container/player/player.component';
+import { SkillComponent } from './container/skill/skill.component';
+import { SkillCDComponent } from './container/skill-cd/skill-cd.component';
+import { PlayerLifeComponent } from './container/player-life/player-life.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -29,6 +30,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     SkillComponent,
     SkillCDComponent,
     PlayerLifeComponent,
+    DropdownComponent,
   ],
   imports: [
     BrowserModule,

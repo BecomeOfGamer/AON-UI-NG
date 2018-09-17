@@ -7,28 +7,7 @@
 
   <hr>
 
-  <div class="select-group">
-    <button type="button">
-      <span>
-        <div>
-          <fa-icon [icon]="faCog"></fa-icon>
-        </div>
-        語系
-      </span>
-    </button>
-    <div class="menu">
-      <div class="item" (click)="itemClick(1)">
-        <fa-icon [icon]="faCheck"></fa-icon>
-        <span class="flag-icon flag-icon-us"></span>
-        English
-      </div>
-      <div class="item" (click)="itemClick(2)">
-        <fa-icon [icon]="faCheck"></fa-icon>
-        <span class="flag-icon flag-icon-tw"></span>
-        繁體中文
-      </div>
-    </div>
-  </div>
+  <Dropdown></Dropdown>
 
   <hr>
 
