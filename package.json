@@ -7,9 +7,14 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint",
+    "tslint": "ng lint",
+    "stylelint": "stylelint src/**/*.scss --syntax scss --fix",
+    "lint": "npm run stylelint && npm run tslint",
     "e2e": "ng e2e"
   },
+  "pre-commit": [
+    "lint"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RemakeAONTeam/AON-UI-NG.git"
@@ -58,6 +63,11 @@
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.4.0",
+    "stylelint": "^9.5.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-config-sass-guidelines": "^5.2.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "3.3.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~2.9.2"
