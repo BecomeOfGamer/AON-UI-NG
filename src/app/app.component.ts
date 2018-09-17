@@ -21,12 +21,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.settings = this.settingsService.init();
-    this.setTranslations(this.settings.language);
-  }
-
-  public setTranslations(language: string): Promise<any> {
-    this.translateService.setDefaultLang(language);
-    return this.translateService.use(language).toPromise();
+    this.translateService.setDefaultLang(this.settings.language);
   }
 
 }
