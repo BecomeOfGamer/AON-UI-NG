@@ -48,3 +48,15 @@ AON-UI is BSD licensed. See [LICENSE](https://github.com/RemakeAONTeam/AON-UI/bl
 ## Contributing
 
 本專案使用 Angular 框架，非常歡迎任何貢獻，如果您對該遊戲有興趣，也歡迎加入我們。
+
+### Stylelint
+
+本專案語法風格依循 `stylelint`， 請在您 PR 之前，安裝以下相關套件，並且通過語法檢測 😇。
+
+- [stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint)
+- [vscode-stylefmt](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-stylefmt)
+- [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+
+```bash
+nmp run lint
+```
