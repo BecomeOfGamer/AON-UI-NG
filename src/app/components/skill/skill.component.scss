@@ -1,0 +1,84 @@
+.skill-group {
+  position: absolute;
+  bottom: 0;
+  right: 40%;
+  left: 35%;
+  padding-top: 1.5rem;
+  width: 30%;
+
+  .skill-panel {
+    padding: 0.6rem;
+    background-color: #282a36;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+
+    .progress {
+      /* overwrite progress-bars.scss */
+      margin-top: 0.6rem;
+    }
+
+    .skill-list {
+      padding: 0.6rem 0.6rem 0.4rem;
+      background-color: #44475a;
+      border-radius: 6px;
+
+      &>div {
+        display: inline-block;
+        position: relative;
+        margin-right: 0.4rem;
+        width: 50px;
+
+        .skill-up {
+          /* 技能升級按鈕 */
+          position: absolute;
+          top: -60%;
+          width: 40px;
+          height: 40px;
+          border-radius: 4px;
+          background-image: url('/assets/plus.png');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          opacity: 1;
+          z-index: 2;
+          transition: all .2s ease-in-out;
+
+          &.disable {
+            /* visibility: hidden; */
+            display: none;
+            top: -50%;
+            opacity: 0;
+          }
+
+        }
+
+        .skill-level {
+          /* 技能等級 */
+          display: flex;
+          margin-top: 0.4rem;
+          padding: 0.6px;
+          max-width: 50px;
+          height: 12px;
+          border-radius: 2px;
+          border: 1px solid #2d3032;
+          background-color: #2d3032;
+
+          .skill-level-current {
+            /* 技能當前等級 */
+            flex: 4;
+            margin: 0 1px;
+            height: inherit;
+            background-color: #00001b;
+
+            &.valid {
+              background: linear-gradient(0deg, #b18a00 27%, #ffd339 67%);
+              background: -moz-linear-gradient(0deg, #b18a00 27%, #ffd339 67%);
+              background: -webkit-linear-gradient(0deg, #b18a00 27%, #ffd339 67%);
+              background: -o-linear-gradient(0deg, #b18a00 27%, #ffd339 67%);
+            }
+          }
+        }
+      }
+    }
+  }
+}

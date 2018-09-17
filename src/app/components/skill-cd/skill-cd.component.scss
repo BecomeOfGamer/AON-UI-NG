@@ -1,0 +1,23 @@
+$size: 100px;
+$font-color: #efefef;
+$font-size: 0.6rem;
+$percent-color: rgba(0, 0, 0, 0.5);
+
+@import '../../../scss/components/skill-cd.scss';
+
+.skill-cd-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+
+  .skill-active {
+    /* 技能啟動(開關技) */
+    width: $size;
+    height: $size;
+    background-repeat: no-repeat;
+    background-size: $size/2;
+    background-position: center;
+    z-index: 1;
+  }
+}
