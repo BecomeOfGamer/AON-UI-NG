@@ -1,0 +1,13 @@
+/**
+  scss - common
+  在下方匯入要複寫的基本樣式
+*/
+@import 'common/h.scss';
+
+/**
+  scss - components
+  在您的特定組件內直接匯入來自 components 的樣式組件
+
+  範例 SkillCD.scss
+  @import '../scss/components/skill.scss';
+*/
