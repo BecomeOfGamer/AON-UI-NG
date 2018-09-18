@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import CDAnimation from '../../utils/skill-animation';
 
@@ -12,13 +12,18 @@ export class BuffCdComponent implements OnInit {
   public slice1style: Object;
   public slice2style: Object;
 
+  public isRun: Boolean = false;
+
   public finish = 400;
   public total = 1000;
-  public percent = (this.finish / this.total) * 100;
+  public during = 0;
+
+  public percent: Number = (this.finish / this.total) * 100;
 
   constructor() { }
 
   ngOnInit() {
+
     this.slice1style = CDAnimation(1, this.finish, this.total);
     this.slice2style = CDAnimation(2, this.finish, this.total);
 
