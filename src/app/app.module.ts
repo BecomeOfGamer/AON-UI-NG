@@ -33,7 +33,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     SkillCDComponent,
     PlayerLifeComponent,
     DropdownComponent,
-    DropdownButtonComponent,
     BuffComponent,
     BuffCdComponent,
   ],
