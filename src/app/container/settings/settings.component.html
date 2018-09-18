@@ -1,13 +1,7 @@
 <div class="settings-group">
 
   <h5 class="settings-title">{{ 'LANGUAGE' | translate }}</h5>
-  <select [(ngModel)]="settings.language" (change)="setLanguage($event)">
-    <option *ngFor="let lan of languages" [ngValue]="lan.key">{{ lan.text | translate }}</option>
-  </select>
-
-  <hr>
-
-  <Dropdown></Dropdown>
+  <dropdown [title]="'LANGUAGE' | translate" [datas]="languages" (choose)="setLanguage($event)"></dropdown>
 
   <hr>
 
@@ -24,7 +18,6 @@
   <aside>
     <h6>Font awesome</h6>
     <fa-icon [icon]="faCoffee"></fa-icon>
-    <fa-icon [icon]="faCog"></fa-icon>
   </aside>
 
   <hr>

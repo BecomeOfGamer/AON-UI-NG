@@ -1,0 +1,15 @@
+<div class="select-group">
+  <button type="button">
+    <span>
+      <fa-icon [icon]="faCog"></fa-icon>
+      {{ title }}
+    </span>
+  </button>
+  <div class="menu">
+    <div *ngFor="let data of datas" class="item" (click)="clickHandler(data)">
+      <fa-icon [ngClass]="{ 'check': data.checked }" [icon]="faCheck"></fa-icon>
+      <span class="flag-icon" [ngClass]="data.icon"></span>
+      {{ data.text | translate }}
+    </div>
+  </div>
+</div>
