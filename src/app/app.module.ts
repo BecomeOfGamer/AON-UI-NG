@@ -18,6 +18,8 @@ import { SkillComponent } from './container/skill/skill.component';
 import { SkillCDComponent } from './container/skill-cd/skill-cd.component';
 import { PlayerLifeComponent } from './container/player-life/player-life.component';
 import { DropdownButtonComponent } from './components/dropdown/dropdown-button/dropdown-button.component';
+import { BuffComponent } from './container/buff/buff.component';
+import { BuffCdComponent } from './container/buff-cd/buff-cd.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -33,6 +35,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     PlayerLifeComponent,
     DropdownComponent,
     DropdownButtonComponent,
+    BuffComponent,
+    BuffCdComponent,
   ],
   imports: [
     BrowserModule,

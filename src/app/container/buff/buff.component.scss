@@ -1,0 +1,12 @@
+.buff-group {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 40%;
+  left: 35%;
+  height: 230px;
+
+  &.disable {
+    display: none;
+  }
+}
