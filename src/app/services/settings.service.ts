@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Settings } from '../models/Settings';
+import { Settings } from '../interfaces/Settings';
 import { TranslateService } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 
