@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
-import { Settings } from './models/settings';
+import { Settings } from './models/Settings';
 
 import { SettingsService } from './services/settings.service';
 

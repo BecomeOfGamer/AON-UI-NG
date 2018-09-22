@@ -2,7 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { faCog, faCheck } from '@fortawesome/free-solid-svg-icons';
 
-import { Language } from '../../models/language';
+import { Language } from '../../models/Language';
 
 @Component({
   selector: 'dropdown',
@@ -13,11 +13,6 @@ export class DropdownComponent implements OnInit {
 
   public faCog = faCog;
   public faCheck = faCheck;
-
-  /**
-   * Button name
-   */
-  @Input() public title: String = 'Button';
 
   /**
    * Dropdown items

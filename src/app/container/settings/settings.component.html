@@ -1,7 +1,7 @@
 <div class="settings-group">
 
   <h5 class="settings-title">{{ 'LANGUAGE' | translate }}</h5>
-  <dropdown [title]="'LANGUAGE' | translate" [datas]="languages" (choose)="setLanguage($event)"></dropdown>
+  <dropdown [datas]="languages" (choose)="setLanguage($event)"></dropdown>
 
   <hr>
 
