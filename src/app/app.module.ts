@@ -7,8 +7,6 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-import { SettingsService } from './services/settings.service';
-
 import { AppComponent } from './app.component';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 
@@ -49,9 +47,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
     FontAwesomeModule,
   ],
-  providers: [
-    SettingsService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

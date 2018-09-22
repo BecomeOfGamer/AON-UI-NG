@@ -3,7 +3,9 @@ import { Settings } from '../models/Settings';
 import { TranslateService } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class SettingsService {
 
   private settings: Settings;
