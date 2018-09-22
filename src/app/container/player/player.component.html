@@ -43,31 +43,31 @@
     <tbody>
       <tr>
         <th>{{ 'PLAYER.Strength' | translate }}</th>
-        <td>10(5)</td>
+        <td>{{ hero.Strength }}({{ hero.AdditionStrength }})</td>
       </tr>
       <tr>
         <th>{{ 'PLAYER.Agility' | translate }}</th>
-        <td>10(50)</td>
+        <td>{{ hero.Agility }}({{ hero.AdditionAgility }})</td>
       </tr>
       <tr>
         <th>{{ 'PLAYER.Intelligence' | translate }}</th>
-        <td>10(5)</td>
+        <td>{{ hero.Intelligence }}({{ hero.AdditionIntelligence }})</td>
       </tr>
       <tr>
         <th>{{ 'PLAYER.CurrentLevel' | translate }}</th>
-        <td>1</td>
+        <td>{{ hero.CurrentLevel }}</td>
       </tr>
       <tr>
         <th>{{ 'PLAYER.CurrentEXP' | translate }}</th>
-        <td>3000</td>
+        <td>{{ hero.CurrentEXP }}</td>
       </tr>
       <tr>
         <th>{{ 'PLAYER.BountyEXP' | translate }}</th>
-        <td>200</td>
+        <td>{{ hero.BountyEXP }}</td>
       </tr>
       <tr>
         <th>{{ 'PLAYER.DeadTime' | translate }}</th>
-        <td>30</td>
+        <td>{{ hero.DeadTime }}</td>
       </tr>
     </tbody>
   </table>
