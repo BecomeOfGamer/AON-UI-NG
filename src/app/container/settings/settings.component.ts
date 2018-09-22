@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
-import { Settings } from '../../interfaces/Settings';
+import { Settings } from '../../models/Settings';
 
 import { SettingsService } from '../../services/settings.service';
 
 import { faCoffee, faCog, faCheck } from '@fortawesome/free-solid-svg-icons';
-import { Language } from '../../interfaces/Language';
+import { Language } from '../../models/Language';
 
 @Component({
   selector: 'app-settings',

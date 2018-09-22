@@ -2,7 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { faCog, faCheck } from '@fortawesome/free-solid-svg-icons';
 
-import { Language } from '../../interfaces/Language';
+import { Language } from '../../models/Language';
 
 @Component({
   selector: 'dropdown',
