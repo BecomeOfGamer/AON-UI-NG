@@ -58,5 +58,5 @@ AON-UI is BSD licensed. See [LICENSE](https://github.com/RemakeAONTeam/AON-UI/bl
 - [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
 ```bash
-nmp run lint
+yarn lint
 ```
