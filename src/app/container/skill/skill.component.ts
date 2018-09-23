@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Skill } from '../../models/Skill';
+import { SkillsService } from '../../services/skills.service';
+
 @Component({
   selector: 'app-skill',
   templateUrl: './skill.component.html',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillComponent implements OnInit {
 
-  constructor() { }
+  public skills: Array<Skill>;
+  public levels: Array<any> = [];
+
+  constructor(
+    private skillsService: SkillsService,
+  ) { }
 
   ngOnInit() {
+    this.skills = this.skillsService.init();
   }
 
 }

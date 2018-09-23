@@ -66,4 +66,9 @@ export interface Skill {
    * 技能提示(重新組合)
    */
   Tips: Tips;
+
+  /**
+   * 技能當前等級, Ex. Lv1 Max(3) => [true, false, false]
+   */
+  LevelValid: Array<boolean>;
 }

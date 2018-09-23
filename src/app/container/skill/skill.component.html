@@ -1,28 +1,22 @@
 <div class="skill-group">
   <div class="skill-panel">
     <div class="skill-list">
-      <div key="skill-1">
-        <div class="skill-up"></div>
-        <app-skill-cd></app-skill-cd>
+
+      <!-- 英雄技能 -->
+      <div *ngFor="let skill of skills">
+        <!-- 技能可否升級 -->
+        <div *ngIf="skill.CanLevelUp" class="skill-up"></div>
+        <!-- 技能冷卻 -->
+        <app-skill-cd *ngIf="skill.Display" [skill]="skill"></app-skill-cd>
+        <!-- 技能等級 -->
         <div class="skill-level">
-          <div class="skill-level-current valid"></div>
-          <div class="skill-level-current valid"></div>
-          <div class="skill-level-current valid"></div>
-          <div class="skill-level-current valid"></div>
-          <div class="skill-level-current"></div>
+          <div class="skill-level-current" [class.valid]="valid" *ngFor="let valid of skill.LevelValid"></div>
         </div>
       </div>
-      <div key="skill-2">
-        <div class="skill-up"></div>
-        <app-skill-cd></app-skill-cd>
-        <div class="skill-level">
-          <div class="skill-level-current valid"></div>
-          <div class="skill-level-current valid"></div>
-          <div class="skill-level-current"></div>
-          <div class="skill-level-current"></div>
-        </div>
-      </div>
+
     </div>
+
+    <!-- 玩家生命與魔力 -->
     <app-player-life></app-player-life>
   </div>
 </div>
