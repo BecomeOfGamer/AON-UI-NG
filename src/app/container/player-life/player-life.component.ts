@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Player } from '../../models/Player';
+import { PlayerService } from '../../services/player.service';
+
 @Component({
   selector: 'app-player-life',
   templateUrl: './player-life.component.html',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayerLifeComponent implements OnInit {
 
-  constructor() { }
+  public player: Player;
+
+  constructor(
+    private playerService: PlayerService,
+  ) { }
 
   ngOnInit() {
+    this.player = this.playerService.init();
   }
 
 }

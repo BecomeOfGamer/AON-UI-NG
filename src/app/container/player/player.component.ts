@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { HeroCharacter } from '../../models/HeroCharacter';
 import { HeroCharacterService } from '../../services/hero-character.service';
 
-import { Skill } from '../../models/Skill';
-import { SkillsService } from '../../services/skills.service';
+import { Player } from '../../models/Player';
+import { PlayerService } from '../../services/player.service';
 
 import { Buff } from '../../models/Buff';
 import { BuffsService } from '../../services/buffs.service';
@@ -17,18 +17,18 @@ import { BuffsService } from '../../services/buffs.service';
 export class PlayerComponent implements OnInit {
 
   public hero: HeroCharacter;
-  public skills: Array<Skill>;
+  public player: Player;
   public buffs: Array<Buff>;
 
   constructor(
     private heroCharacterService: HeroCharacterService,
-    private skillsService: SkillsService,
+    private playerService: PlayerService,
     private buffsService: BuffsService,
   ) { }
 
   ngOnInit() {
     this.hero = this.heroCharacterService.init();
-    this.skills = this.skillsService.init();
+    this.player = this.playerService.init();
     this.buffs = this.buffsService.init();
   }
 
