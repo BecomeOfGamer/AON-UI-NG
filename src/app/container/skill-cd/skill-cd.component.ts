@@ -46,41 +46,21 @@ export class SkillCDComponent implements OnInit {
    */
   public renderSliceStyle(no: number): Object {
     return CDAnimation(no, this.finish, this.total);
-    // Example Style
-    // this.slice1style = {
-    //   'transform': `rotate(60deg)`,
-    //   'ms-transform': `rotate(60deg)`,
-    //   'moz-transform': `rotate(60degg)`,
-    //   'webkit-transform': `rotate(60deg)`,
-    //   'o-transform': `rotate(60deg)`,
-    //   'zoom': 1,
-    // };
-    // this.slice2style = {
-    //   'transform': `rotate(0deg)`,
-    //   'ms-transform': `rotate(0deg)`,
-    //   'moz-transform': `rotate(0degg)`,
-    //   'webkit-transform': `rotate(0deg)`,
-    //   'o-transform': `rotate(0deg)`,
-    //   'zoom': 1,
-    // };
   }
 
   /**
    * 渲染技能圖案
    */
-  public renderWebpath(): BackroundImage {
+  public renderWebpath(): Object {
     return { 'background-image': `url(/assets/${this.webpath})` };
   }
 
   /**
    * 渲染技能啟動
    */
-  public renderToggle(): BackroundImage {
+  public renderToggle(): Object {
     return { 'background-image': this.toggle ? `url('/assets/skill-toggle.png')` : '' };
   }
 
 }
 
-interface BackroundImage {
-  'background-image': string;
-}
