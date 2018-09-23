@@ -2,6 +2,9 @@ import { Component, OnInit, Input } from '@angular/core';
 
 import CDAnimation from '../../utils/skill-animation';
 
+import { Buff } from '../../models/Buff';
+import { Tips } from '../../models/Tips';
+
 @Component({
   selector: 'app-buff-cd',
   templateUrl: './buff-cd.component.html',
@@ -9,41 +12,44 @@ import CDAnimation from '../../utils/skill-animation';
 })
 export class BuffCdComponent implements OnInit {
 
-  public slice1style: Object;
-  public slice2style: Object;
+  // 動畫演算法度量衡為[千]
+  private finish = 0;
+  private total = 1000;
 
-  public isRun: Boolean = false;
+  @Input() private buff: Buff;
 
-  public finish = 400;
-  public total = 1000;
-  public during = 0;
-
-  public percent: Number = (this.finish / this.total) * 100;
-
+  public webpath: string;
+  public toggle: boolean;
+  public percent: number;
+  public currentLevel: number;
+  public maxLevel: number;
+  public tips: Tips;
   constructor() { }
 
   ngOnInit() {
+    this.webpath = this.buff.Webpath;
+    // this.percent = Math.round(this.buff.CDPercent * 100);
+    this.percent = this.buff.MaxDuration > 0 ? Math.round((this.buff.MaxDuration - this.buff.Duration) / this.buff.MaxDuration * 100) : 0;
+    this.tips = this.buff.Tips;
 
-    this.slice1style = CDAnimation(1, this.finish, this.total);
-    this.slice2style = CDAnimation(2, this.finish, this.total);
+    // Set current load
+    this.finish = this.percent * 10;
+    this.finish = this.finish + (50 / this.buff.MaxDuration);
+  }
 
-    // this.slice1style = {
-    //   'transform': `rotate(60deg)`,
-    //   'ms-transform': `rotate(60deg)`,
-    //   'moz-transform': `rotate(60degg)`,
-    //   'webkit-transform': `rotate(60deg)`,
-    //   'o-transform': `rotate(60deg)`,
-    //   'zoom': 1,
-    // };
+  /**
+  * 渲染技能冷卻動畫
+  * @param no {string}
+  */
+  public renderSliceStyle(no: number): Object {
+    return CDAnimation(no, this.finish, this.total);
+  }
 
-    // this.slice2style = {
-    //   'transform': `rotate(0deg)`,
-    //   'ms-transform': `rotate(0deg)`,
-    //   'moz-transform': `rotate(0degg)`,
-    //   'webkit-transform': `rotate(0deg)`,
-    //   'o-transform': `rotate(0deg)`,
-    //   'zoom': 1,
-    // };
+  /**
+   * 渲染技能圖案
+   */
+  public renderWebpath(): Object {
+    return { 'background-image': `url(/assets/${this.webpath})` };
   }
 
 }

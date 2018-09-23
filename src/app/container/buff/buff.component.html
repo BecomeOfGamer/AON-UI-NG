@@ -1,4 +1,3 @@
 <div class="buff-group">
-  <app-buff-cd></app-buff-cd>
-  <app-buff-cd></app-buff-cd>
+  <app-buff-cd *ngFor="let buff of buffs" [buff]="buff"></app-buff-cd>
 </div>

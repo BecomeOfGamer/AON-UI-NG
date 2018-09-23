@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Buff } from '../../models/Buff';
+import { BuffsService } from '../../services/buffs.service';
+
 @Component({
   selector: 'app-buff',
   templateUrl: './buff.component.html',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuffComponent implements OnInit {
 
-  constructor() { }
+  public buffs: Array<Buff>;
+
+  constructor(
+    private buffsService: BuffsService,
+  ) { }
 
   ngOnInit() {
+    this.buffs = this.buffsService.init();
   }
 
 }
