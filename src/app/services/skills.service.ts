@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 import { Skill } from '../models/Skill';
 import MockSkills from '../mock/MockSkills';
@@ -8,17 +9,13 @@ import MockSkills from '../mock/MockSkills';
 })
 export class SkillsService {
 
-  private skills: Array<Skill>;
-
   constructor() { }
 
   /**
    * Initial skills.
-   * @returns {Array<Skill>}
+   * @returns {Observable<Skill[]>}
    */
-  public init(): Array<Skill> {
-    // return from UE4 or mock datas
-    this.skills = MockSkills;
-    return this.skills;
+  public getSkills(): Observable<Skill[]> {
+    return of(MockSkills);
   }
 }

@@ -17,7 +17,7 @@ export class BuffComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.buffs = this.buffsService.init();
+    this.buffsService.getBuffs().subscribe(buffs => this.buffs = buffs);
   }
 
 }

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 import { HeroCharacter } from '../models/HeroCharacter';
 import MockHeroCharacter from '../mock/MockHeroCharacter';
@@ -8,17 +9,13 @@ import MockHeroCharacter from '../mock/MockHeroCharacter';
 })
 export class HeroCharacterService {
 
-  private heroCharacter: HeroCharacter;
-
   constructor() { }
 
   /**
    * Initial hero character.
-   * @returns {HeroCharacter}
+   * @returns {Observable<HeroCharacter>}
    */
-  public init(): HeroCharacter {
-    // return from UE4 or mock datas
-    this.heroCharacter = MockHeroCharacter;
-    return this.heroCharacter;
+  public getHero(): Observable<HeroCharacter> {
+    return of(MockHeroCharacter);
   }
 }

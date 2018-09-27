@@ -17,7 +17,7 @@ export class PlayerLifeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.player = this.playerService.init();
+    this.playerService.getPlayer().subscribe(player => this.player = player);
   }
 
 }

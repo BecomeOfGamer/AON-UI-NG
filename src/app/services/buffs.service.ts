@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 import { Buff } from '../models/Buff';
 import MockBuffs from '../mock/MockBuffs';
@@ -8,17 +9,13 @@ import MockBuffs from '../mock/MockBuffs';
 })
 export class BuffsService {
 
-  private buffs: Array<Buff>;
-
   constructor() { }
 
   /**
    * Initial buffs.
-   * @returns {Array<Buff>}
+   * @returns {Observable<Buff[]>}
    */
-  public init(): Array<Buff> {
-    // return from UE4 or mock datas
-    this.buffs = MockBuffs;
-    return this.buffs;
+  public getBuffs(): Observable<Buff[]> {
+    return of(MockBuffs);
   }
 }

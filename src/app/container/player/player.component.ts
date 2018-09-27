@@ -22,8 +22,8 @@ export class PlayerComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.hero = this.heroCharacterService.init();
-    this.player = this.playerService.init();
+    this.heroCharacterService.getHero().subscribe(hero => this.hero = hero);
+    this.playerService.getPlayer().subscribe(player => this.player = player);
   }
 
 }
