@@ -25,7 +25,6 @@ export interface HeroCharacter {
    */
   AdditionAgility: number;
 
-
   /**
    * 外加智力
    */

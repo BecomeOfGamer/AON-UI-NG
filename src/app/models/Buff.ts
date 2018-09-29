@@ -46,5 +46,4 @@ export interface Buff {
    * Object Buff提示(重新組合)
    */
   Tips: Tips;
-
 }
