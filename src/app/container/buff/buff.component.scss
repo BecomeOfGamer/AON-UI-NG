@@ -1,10 +1,10 @@
 .buff-group {
-  display: flex;
-  position: absolute;
   bottom: 0;
-  right: 40%;
-  left: 35%;
+  display: flex;
   height: 230px;
+  left: 35%;
+  position: absolute;
+  right: 40%;
 
   &.disable {
     display: none;
