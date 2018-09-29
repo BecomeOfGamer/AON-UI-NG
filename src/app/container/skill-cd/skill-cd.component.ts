@@ -81,7 +81,7 @@ export class SkillCDComponent implements OnInit {
   private mockSkillAnimate() {
     setInterval(() => {
       const { CDPercent } = this.skill;
-      this.skill.CDPercent = CDPercent + 0.01 < 1 ? CDPercent + 0.01 : 0;
+      this.skill.CDPercent = CDPercent + 0.01 <= 1 ? CDPercent + 0.01 : 0;
       this.init();
     }, 100);
   }

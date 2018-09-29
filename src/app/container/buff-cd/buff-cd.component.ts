@@ -66,9 +66,9 @@ export class BuffCdComponent implements OnInit {
   private mockBuffAnimate() {
     setInterval(() => {
       const { Duration, MaxDuration } = this.buff;
-      this.buff.Duration = Duration - 0.1 > 0 ? Duration - 0.1 : MaxDuration;
+      this.buff.Duration = Duration - 0.01 >= 0 ? Duration - 0.01 : MaxDuration;
       this.init();
-    }, 100);
+    }, 10);
   }
 
 }
