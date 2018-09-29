@@ -5,6 +5,8 @@ import CDAnimation from '@utils/skill-animation';
 import { Buff } from '@models/Buff';
 import { Tips } from '@models/Tips';
 
+import { environment } from '@env/environment';
+
 @Component({
   selector: 'app-buff-cd',
   templateUrl: './buff-cd.component.html',
@@ -24,17 +26,15 @@ export class BuffCdComponent implements OnInit {
   public currentLevel: number;
   public maxLevel: number;
   public tips: Tips;
+
   constructor() { }
 
   ngOnInit() {
-    this.webpath = this.buff.Webpath;
-    // this.percent = Math.round(this.buff.CDPercent * 100);
-    this.percent = this.buff.MaxDuration > 0 ? Math.round((this.buff.MaxDuration - this.buff.Duration) / this.buff.MaxDuration * 100) : 0;
-    this.tips = this.buff.Tips;
+    this.init();
 
-    // Set current load
-    this.finish = this.percent * 10;
-    this.finish = this.finish + (50 / this.buff.MaxDuration);
+    if (!environment.production) {
+      this.mockBuffAnimate();
+    }
   }
 
   /**
@@ -50,6 +50,25 @@ export class BuffCdComponent implements OnInit {
    */
   public renderWebpath(): Object {
     return { 'background-image': `url(/assets/${this.webpath})` };
+  }
+
+  private init() {
+    this.webpath = this.buff.Webpath;
+    // this.percent = Math.round(this.buff.CDPercent * 100);
+    this.percent = this.buff.MaxDuration > 0 ? Math.round((this.buff.MaxDuration - this.buff.Duration) / this.buff.MaxDuration * 100) : 0;
+    this.tips = this.buff.Tips;
+
+    // Set current load
+    this.finish = this.percent * 10;
+    // this.finish = this.finish + (50 / this.buff.MaxDuration);
+  }
+
+  private mockBuffAnimate() {
+    setInterval(() => {
+      const { Duration, MaxDuration } = this.buff;
+      this.buff.Duration = Duration - 0.1 > 0 ? Duration - 0.1 : MaxDuration;
+      this.init();
+    }, 100);
   }
 
 }
