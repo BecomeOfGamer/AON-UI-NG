@@ -17,32 +17,32 @@ $info: #04c7fb;
 /* theme */
 
 .progress {
-  background-color: #222;
+  position: relative;
   display: flex;
-  height: 1rem;
   justify-content: center;
   overflow: hidden;
-  position: relative;
   width: 100%;
+  height: 1rem;
+  background-color: #222;
 
   .progress-text {
-    color: #e5e5e5;
     font-size: 0.8rem;
-    line-height: 1rem;
-    text-shadow: -1px 0 #444, 0 1px #444, 1px 0 #444, 0 -1px #444;
+    color: #e5e5e5;
     z-index: 3;
+    text-shadow: -1px 0 #444, 0 1px #444, 1px 0 #444, 0 -1px #444;
+    line-height: 1rem;
   }
 
   .progress-bar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: inherit;
     background: linear-gradient(90deg, #01438e 26%, #149df1 100%);
     background: -moz-linear-gradient(90deg, #01438e 26%, #149df1 100%);
     background: -webkit-linear-gradient(90deg, #01438e 26%, #149df1 100%);
     background: -o-linear-gradient(90deg, #01438e 26%, #149df1 100%);
-    bottom: 0;
-    height: inherit;
-    left: 0;
-    position: absolute;
-    top: 0;
   }
 
   .progress-bar-success {

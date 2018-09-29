@@ -26,6 +26,9 @@ $percent-color:rgba(0, 0, 0, 0.5);
 */
 
 .pie {
+  position: absolute;
+  width: $size;
+  height: $size;
   background-position: center;
   background-repeat: no-repeat;
   background-size: $size/2;
@@ -33,70 +36,67 @@ $percent-color:rgba(0, 0, 0, 0.5);
   -moz-border-radius: $size/2;
   border-radius: $size/2;
   clip: rect($size*0.25, $size*0.75, $size*0.75, $size*0.25);
-  height: $size;
-  position: absolute;
-  width: $size;
 
   .clip1 {
-    clip: rect(0, $size, $size, $size*0.5);
-    height: $size;
-    left: 0;
     position: absolute;
     top: 0;
+    left: 0;
     width: $size;
+    height: $size;
+    clip: rect(0, $size, $size, $size*0.5);
   }
 
   .slice1 {
+    position: absolute;
+    width: $size;
+    height: $size;
     background-color: $percent-color;
     border-color: $percent-color;
     -webkit-border-radius: $size/2;
     -moz-border-radius: $size/2;
     border-radius: $size/2;
     clip: rect(0, $size*0.5, $size, 0);
-    height: $size;
-    position: absolute;
     -webkit-transform: rotate(0);
     -moz-transform: rotate(0);
     -o-transform: rotate(0);
     transform: rotate(0);
-    width: $size;
   }
 
   .clip2 {
-    clip: rect(0, $size*0.5, $size, 0);
-    height: $size;
-    left: 0;
     position: absolute;
     top: 0;
+    left: 0;
     width: $size;
+    height: $size;
+    clip: rect(0, $size*0.5, $size, 0);
   }
 
   .slice2 {
+    position: absolute;
+    width: $size;
+    height: $size;
     background-color: $percent-color;
     border-color: $percent-color;
     -moz-border-radius: $size/2;
     -webkit-border-radius: $size/2;
     border-radius: $size/2;
     clip: rect(0, $size, $size, $size*0.5);
-    height: $size;
-    position: absolute;
     -webkit-transform: rotate(0);
     -moz-transform: rotate(0);
     -o-transform: rotate(0);
     transform: rotate(0);
-    width: $size;
   }
 
   .status {
-    align-items: center;
-    color: $font-color;
+    position: absolute;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $size;
+    height: $size;
     font-size: $font-size;
     font-weight: 600;
-    height: $size;
-    justify-content: center;
-    position: absolute;
     text-align: center;
-    width: $size;
+    color: $font-color;
   }
 }

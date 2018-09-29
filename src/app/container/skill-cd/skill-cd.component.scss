@@ -6,19 +6,17 @@ $percent-color: rgba(0, 0, 0, 0.5);
 @import '../../../scss/components/skill-cd.scss';
 
 .skill-cd-group {
-  align-items: center;
   display: flex;
-  height: 45px;
+  align-items: center;
   justify-content: center;
+  height: 45px;
 
   .skill-toggle {
+    width: $size;
+    height: $size;
     background-position: center;
     background-repeat: no-repeat;
     background-size: $size/2;
-    height: $size;
-
-    /* 技能啟動(開關技) */
-    width: $size;
     z-index: 1;
   }
 }

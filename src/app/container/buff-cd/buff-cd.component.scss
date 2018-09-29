@@ -6,12 +6,12 @@ $percent-color: rgba(0, 0, 0, 0.5);
 @import '../../../scss/components/skill-cd.scss';
 
 .buff-box {
-  align-items: center;
-  border: 1px solid #222;
   display: flex;
-  height: $size/2;
+  align-items: center;
   justify-content: center;
   margin-right: 0.3rem;
   width: $size/2;
+  height: $size/2;
+  border: 1px solid #222;
 }
 

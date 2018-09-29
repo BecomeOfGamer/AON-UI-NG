@@ -1,24 +1,24 @@
 .player-group {
-  bottom: 0%;
-  display: flex;
-  left: 0%;
   position: absolute;
+  bottom: 0%;
+  left: 0%;
+  display: flex;
 
   .table {
-    border-collapse: collapse;
     text-align: center;
+    border-collapse: collapse;
 
     tr {
       th {
-        color: #fff;
-        font-weight: normal;
-        min-width: 120px;
         padding: 0.5rem 0.8rem;
+        min-width: 120px;
+        font-weight: normal;
+        color: #fff;
       }
 
       td {
-        color: #fec200;
         padding: 0.5rem 0.8rem;
+        color: #fec200;
       }
 
       &:nth-child(odd) td,
@@ -57,21 +57,21 @@
   }
 
   .table-hero {
-    border-collapse: collapse;
     margin-top: 2rem;
     text-align: center;
+    border-collapse: collapse;
 
     tr {
       th {
-        color: #fff;
-        font-weight: normal;
-        min-width: 120px;
         padding: 0.5rem 0.8rem;
+        min-width: 120px;
+        font-weight: normal;
+        color: #fff;
       }
 
       td {
-        color: #fec200;
         padding: 0.5rem 0.8rem;
+        color: #fec200;
       }
 
       &:nth-child(odd) td,
