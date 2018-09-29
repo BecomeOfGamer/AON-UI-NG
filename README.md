@@ -51,9 +51,9 @@ yarn build
 
 範例：
 
-```typscript
+```typescript
 
-// import MockSkills from '../../mock/MockSkills';
+// import MockSkills from '../../../../mock/MockSkills';
 
 import MockSkills from '@mock/MockSkills';
 ```
