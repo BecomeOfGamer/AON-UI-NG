@@ -10,7 +10,8 @@
       "@mock/*": ["app/mock/*"],
       "@models/*": ["app/models/*"],
       "@services/*": ["app/services/*"],
-      "@utils/*": ["app/utils/*"]
+      "@utils/*": ["app/utils/*"],
+      "@env/*": ["environments/*"],
     },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
