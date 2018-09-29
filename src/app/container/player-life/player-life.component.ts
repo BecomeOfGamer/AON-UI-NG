@@ -31,7 +31,7 @@ export class PlayerLifeComponent implements OnInit {
   /**
    * 渲染血條樣式
    */
-  renderHP(): Object {
+  public renderHP(): Object {
     const { CurrentHP, CurrentMaxHP } = this.player;
     return { width: `${Math.round(CurrentHP / CurrentMaxHP * 100)}%` };
   }
@@ -39,7 +39,7 @@ export class PlayerLifeComponent implements OnInit {
   /**
    * 渲染魔力樣式
    */
-  renderMP(): Object {
+  public renderMP(): Object {
     const { CurrentMP, CurrentMaxMP } = this.player;
     return { width: `${Math.round(CurrentMP / CurrentMaxMP * 100)}%` };
   }
@@ -49,7 +49,7 @@ export class PlayerLifeComponent implements OnInit {
    * @param interval 頻率(毫秒)
    * @param damage 傷害
    */
-  mockHPAnimate(interval: number, damage: number) {
+  private mockHPAnimate(interval: number, damage: number) {
     setInterval(() => {
       const { CurrentHP, CurrentMaxHP } = this.player;
       this.player.CurrentHP = CurrentHP - damage > 0 ? CurrentHP - damage : CurrentMaxHP;
@@ -62,7 +62,7 @@ export class PlayerLifeComponent implements OnInit {
    * @param interval 頻率(毫秒)
    * @param damage 傷害
    */
-  mockMPAnimate(interval: number, damage: number) {
+  private mockMPAnimate(interval: number, damage: number) {
     setInterval(() => {
       const { CurrentMP, CurrentMaxMP } = this.player;
       this.player.CurrentMP = CurrentMP - damage > 0 ? CurrentMP - damage : CurrentMaxMP;
