@@ -8,13 +8,14 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
+
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 
 import { SettingsComponent } from './container/settings/settings.component';
 import { PlayerComponent } from './container/player/player.component';
+import { PlayerLifeComponent } from './container/player-life/player-life.component';
 import { SkillComponent } from './container/skill/skill.component';
 import { SkillCDComponent } from './container/skill-cd/skill-cd.component';
-import { PlayerLifeComponent } from './container/player-life/player-life.component';
 import { BuffComponent } from './container/buff/buff.component';
 import { BuffCdComponent } from './container/buff-cd/buff-cd.component';
 
@@ -25,12 +26,12 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
+    DropdownComponent,
     SettingsComponent,
     PlayerComponent,
+    PlayerLifeComponent,
     SkillComponent,
     SkillCDComponent,
-    PlayerLifeComponent,
-    DropdownComponent,
     BuffComponent,
     BuffCdComponent,
   ],
