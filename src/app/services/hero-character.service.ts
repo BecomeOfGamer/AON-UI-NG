@@ -12,7 +12,7 @@ export class HeroCharacterService {
   constructor() { }
 
   /**
-   * Initial hero character.
+   * 初始化角色資訊
    * @returns {Observable<HeroCharacter>}
    */
   public getHero(): Observable<HeroCharacter> {

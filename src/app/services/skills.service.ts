@@ -12,7 +12,7 @@ export class SkillsService {
   constructor() { }
 
   /**
-   * Initial skills.
+   * 初始化技能
    * @returns {Observable<Skill[]>}
    */
   public getSkills(): Observable<Skill[]> {

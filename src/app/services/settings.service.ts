@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Settings } from '../models/Settings';
 import { TranslateService } from '@ngx-translate/core';
-import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -15,26 +15,25 @@ export class SettingsService {
   ) { }
 
   /**
-   * 初始化設定檔案.
+   * 初始化設定檔
    * @returns {Settings}
    */
   public init(): Settings {
     // 之後要改成讀取用戶端本地檔案, 目前先寫死
-    this.settings = { language: 'en' };
+    this.settings = { language: 'zh-tw' };
     return this.settings;
   }
 
   /**
-   * 更新 model 的 settings
+   * 設定語系檔
    * @param {string} language
-   * @returns {Promise<Settings>}
    */
   public setLanguage(language: string): void {
     this.settings.language = language;
   }
 
   /**
-   * 取得設定檔案 settings
+   * 取得設定檔案
    * @returns {Settings}
    */
   public getSettings(): Settings {

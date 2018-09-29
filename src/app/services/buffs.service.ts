@@ -12,7 +12,7 @@ export class BuffsService {
   constructor() { }
 
   /**
-   * Initial buffs.
+   * 初始化增減益
    * @returns {Observable<Buff[]>}
    */
   public getBuffs(): Observable<Buff[]> {

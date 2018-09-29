@@ -12,7 +12,7 @@ export class PlayerService {
   constructor() { }
 
   /**
-   * Initial player.
+   * 初始化玩家資訊
    * @returns {Observable<Player>}
    */
   public getPlayer(): Observable<Player> {
