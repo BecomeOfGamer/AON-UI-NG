@@ -8,7 +8,8 @@
     "build": "ng build",
     "test": "ng test",
     "tslint": "ng lint",
-    "stylelint": "stylelint src/**/**/**/**/*.scss --syntax scss --fix",
+    "stylelint": "stylelint src/**/**/**/**/*.scss --syntax scss",
+    "stylelint:fix": "stylelint src/**/**/**/**/*.scss --syntax scss --fix",
     "lint": "npm run stylelint && npm run tslint",
     "e2e": "ng e2e"
   },
