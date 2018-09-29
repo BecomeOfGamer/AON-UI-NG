@@ -4,6 +4,8 @@ import { TranslateService } from '@ngx-translate/core';
 
 import { Settings } from '@models/Settings';
 
+import { environment } from '@env/environment';
+
 @Injectable({
   providedIn: 'root'
 })
