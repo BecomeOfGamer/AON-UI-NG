@@ -29,7 +29,7 @@ export class PlayerLifeComponent implements OnInit {
   }
 
   /**
-   * 血條樣式
+   * 渲染血條樣式
    */
   renderHP(): Object {
     const { CurrentHP, CurrentMaxHP } = this.player;
@@ -37,7 +37,7 @@ export class PlayerLifeComponent implements OnInit {
   }
 
   /**
-   * 魔力樣式
+   * 渲染魔力樣式
    */
   renderMP(): Object {
     const { CurrentMP, CurrentMaxMP } = this.player;
