@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import CDAnimation from '../../utils/skill-animation';
+import CDAnimation from '@utils/skill-animation';
 
-import { Buff } from '../../models/Buff';
-import { Tips } from '../../models/Tips';
+import { Buff } from '@models/Buff';
+import { Tips } from '@models/Tips';
 
 @Component({
   selector: 'app-buff-cd',

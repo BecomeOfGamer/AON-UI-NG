@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-import { HeroCharacter } from '../../models/HeroCharacter';
-import { HeroCharacterService } from '../../services/hero-character.service';
+import { Player } from '@models/Player';
+import { PlayerService } from '@services/player.service';
 
-import { Player } from '../../models/Player';
-import { PlayerService } from '../../services/player.service';
+import { HeroCharacter } from '@models/HeroCharacter';
+import { HeroCharacterService } from '@services/hero-character.service';
 
 @Component({
   selector: 'app-player',
@@ -13,17 +13,17 @@ import { PlayerService } from '../../services/player.service';
 })
 export class PlayerComponent implements OnInit {
 
-  public hero: HeroCharacter;
   public player: Player;
+  public hero: HeroCharacter;
 
   constructor(
-    private heroCharacterService: HeroCharacterService,
     private playerService: PlayerService,
+    private heroService: HeroCharacterService,
   ) { }
 
   ngOnInit() {
-    this.heroCharacterService.getHero().subscribe(hero => this.hero = hero);
     this.playerService.getPlayer().subscribe(player => this.player = player);
+    this.heroService.getHero().subscribe(hero => this.hero = hero);
   }
 
 }

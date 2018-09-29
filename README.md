@@ -32,8 +32,31 @@ yarn build
 
 ## Design Pattern
 
+### UI
+
 - 請勿使用 `button`
-- 所有圖片請使用 `backgroundImage`, 避免有拖曳問題
+- 所有圖片請使用 `backgroundImage`, 
+
+### Path
+
+可使用絕對路徑變數，詳細請參見 `tsconfig.json`。
+
+- `@app` = `app/*`
+- `@components` = `app/components/*` 
+- `@container` = `app/container/*` 
+- `@mock` = `app/mock/*` 
+- `@models` = `app/models/*` 
+- `@services` = `app/services/*` 
+- `@utils` = `app/utils/*` 
+
+範例：
+
+```typscript
+
+// import MockSkills from '../../mock/MockSkills';
+
+import MockSkills from '@mock/MockSkills';
+```
 
 ## License
 

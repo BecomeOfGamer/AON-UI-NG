@@ -1,7 +1,10 @@
+
+import { Language } from '@models/Language';
+
 export interface Settings {
 
   /**
-   * 語系
+   * 語系列表
    */
-  language: string;
+  languages: Array<Language>;
 }

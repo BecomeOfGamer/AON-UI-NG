@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Settings } from './models/Settings';
+import { Settings } from '@models/Settings';
+import { Language } from '@models/Language';
 
 import { TranslateService } from '@ngx-translate/core';
-import { SettingsService } from './services/settings.service';
+import { SettingsService } from '@services/settings.service';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.settings = this.settingsService.init();
-    this.translateService.setDefaultLang(this.settings.language);
+
+    const langs: Array<Language> = this.settings.languages;
+    this.translateService.setDefaultLang(langs.find(value => value.checked).key);
   }
 
 }

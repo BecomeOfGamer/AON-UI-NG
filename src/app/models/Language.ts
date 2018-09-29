@@ -11,7 +11,7 @@ export interface Language {
   icon: string;
 
   /**
-   * 語系名稱
+   * 多國語系變數 (assets/i18n/...)
    */
   text: string;
 

@@ -1,4 +1,4 @@
-import { Buff } from '../models/Buff';
+import { Buff } from '@models/Buff';
 
 const MockBuffs: Array<Buff> = [
   {

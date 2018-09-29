@@ -1,4 +1,4 @@
-import { Player } from '../models/Player';
+import { Player } from '@models/Player';
 
 const MockPlayer: Player = {
   UnitName: '織田信長',

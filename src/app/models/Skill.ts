@@ -1,4 +1,4 @@
-import { Tips } from './Tips';
+import { Tips } from '@models/Tips';
 
 export interface Skill {
 

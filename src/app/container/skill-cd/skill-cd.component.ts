@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import CDAnimation from '../../utils/skill-animation';
+import CDAnimation from '@utils/skill-animation';
 
-import { Skill } from '../../models/Skill';
-import { Tips } from '../../models/Tips';
+import { Skill } from '@models/Skill';
+import { Tips } from '@models/Tips';
 
 @Component({
   selector: 'app-skill-cd',

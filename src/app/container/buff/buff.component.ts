@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Buff } from '../../models/Buff';
-import { BuffsService } from '../../services/buffs.service';
+import { Buff } from '@models/Buff';
+import { BuffsService } from '@services/buffs.service';
 
 @Component({
   selector: 'app-buff',

@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
-import { Settings } from '../../models/Settings';
+import { Settings } from '@models/Settings';
+import { SettingsService } from '@services/settings.service';
 
-import { SettingsService } from '../../services/settings.service';
-
-import { faCoffee, faCog, faCheck } from '@fortawesome/free-solid-svg-icons';
-import { Language } from '../../models/Language';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-settings',
@@ -16,9 +14,6 @@ import { Language } from '../../models/Language';
 export class SettingsComponent implements OnInit {
 
   public settings: Settings;
-
-  public languages: Array<Language>;
-
   public faCoffee = faCoffee;
 
   constructor(
@@ -28,23 +23,12 @@ export class SettingsComponent implements OnInit {
 
   ngOnInit() {
     this.settings = this.settingsService.getSettings();
-    this.languages = [{
-      key: 'en',
-      text: 'LANGUAGES.EN',
-      icon: 'flag-icon-us',
-      checked: true,
-    }, {
-      key: 'zh-tw',
-      text: 'LANGUAGES.ZH-TW',
-      icon: 'flag-icon-tw',
-      checked: false,
-    }];
   }
 
   public setLanguage(event: string) {
-    this.settings.language = event;
-    this.settingsService.setLanguage(this.settings.language);
-    this.translateService.use(this.settings.language);
+    this.settingsService.setLanguage(event);
+    console.log(this.settings);
+    this.translateService.use(event);
   }
 
 }

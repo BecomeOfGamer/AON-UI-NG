@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
-import { Buff } from '../models/Buff';
-import MockBuffs from '../mock/MockBuffs';
+import { Buff } from '@models/Buff';
+import MockBuffs from '@mock/MockBuffs';
 
 @Injectable({
   providedIn: 'root'

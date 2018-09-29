@@ -1,4 +1,4 @@
-import { Skill } from '../models/Skill';
+import { Skill } from '@models/Skill';
 
 const MockSkills: Array<Skill> = [
   {

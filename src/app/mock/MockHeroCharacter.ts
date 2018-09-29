@@ -1,4 +1,4 @@
-import { HeroCharacter } from '../models/HeroCharacter';
+import { HeroCharacter } from '@models/HeroCharacter';
 
 const MockHeroCharacter: HeroCharacter = {
   Strength: 11,

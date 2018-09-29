@@ -2,7 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { faCog, faCheck } from '@fortawesome/free-solid-svg-icons';
 
-import { Language } from '../../models/Language';
+import { Language } from '@models/Language';
 
 @Component({
   selector: 'dropdown',
@@ -29,7 +29,7 @@ export class DropdownComponent implements OnInit {
   ngOnInit() { }
 
   public clickHandler(item: Language) {
-    this.datas = this.datas.map((data: Language) => {
+    this.datas = this.datas.map(data => {
       data.checked = data.key === item.key ? true : false;
       return data;
     });
