@@ -3,8 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { TranslateService } from '@ngx-translate/core';
 
 import { Settings } from '@models/Settings';
-
 import { environment } from '@env/environment';
+
+import LANGUAGE from '@config/LANGUAGE';
 
 @Injectable({
   providedIn: 'root'
@@ -24,17 +25,7 @@ export class SettingsService {
   public init(): Settings {
     // 之後要改成讀取用戶端本地檔案, 目前先寫死
     this.settings = {
-      languages: [{
-        key: 'en',
-        text: 'LANGUAGES.EN',
-        icon: 'flag-icon-us',
-        checked: false,
-      }, {
-        key: 'zh-tw',
-        text: 'LANGUAGES.ZH-TW',
-        icon: 'flag-icon-tw',
-        checked: true,
-      }],
+      languages: LANGUAGE,
     };
     return this.settings;
   }
