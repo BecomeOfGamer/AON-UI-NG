@@ -11,7 +11,8 @@
       "@models/*": ["app/models/*"],
       "@services/*": ["app/services/*"],
       "@utils/*": ["app/utils/*"],
-      "@env/*": ["environments/*"],
+      "@config/*": ["app/config/*"],
+      "@env/*": ["environments/*"]
     },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
