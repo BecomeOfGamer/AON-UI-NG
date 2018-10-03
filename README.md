@@ -26,8 +26,16 @@ yarn start
 
 ## Build
 
+### Development
+
 ```bash
 yarn build
+```
+
+### Production
+
+```bash
+yarn build:prod
 ```
 
 ## Design Pattern
@@ -40,14 +48,6 @@ yarn build
 ### Path
 
 可使用絕對路徑變數，詳細請參見 `tsconfig.json`。
-
-- `@app` = `app/*`
-- `@components` = `app/components/*` 
-- `@container` = `app/container/*` 
-- `@mock` = `app/mock/*` 
-- `@models` = `app/models/*` 
-- `@services` = `app/services/*` 
-- `@utils` = `app/utils/*` 
 
 範例：
 
