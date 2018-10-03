@@ -2,7 +2,8 @@
   "LANGUAGE": "語系",
   "LANGUAGES": {
     "EN": "English",
-    "ZH-TW": "繁體中文"
+    "ZH-TW": "繁體中文",
+    "ZH-CN": "简体中文"
   },
   "PLAYER": {
     "UnitName": "英雄名稱",
@@ -25,5 +26,5 @@
     "CurrentEXP": "目前經驗值"
   },
   "HELLO": "嗨",
-  "TITLE": "AON UI 中文"
+  "TITLE": "AON UI 繁體中文"
 }

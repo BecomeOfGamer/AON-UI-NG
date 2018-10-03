@@ -1,0 +1,30 @@
+{
+  "LANGUAGE": "语系",
+  "LANGUAGES": {
+    "EN": "English",
+    "ZH-TW": "繁體中文",
+    "ZH-CN": "简体中文"
+  },
+  "PLAYER": {
+    "UnitName": "英雄名称",
+    "CurrentMoveSpeed": "移动速度",
+    "CurrentHP": "HP",
+    "CurrentMP": "MP",
+    "CurrentAttackSpeed": "攻击速度",
+    "CurrentAttack": "攻击",
+    "CurrentArmor": "护甲",
+    "CurrentAttackRange": "攻击范围",
+    "AdditionStrength": "外加力量",
+    "AdditionAgility": "外加敏捷",
+    "AdditionIntelligence": "外加智力",
+    "DeadTime": "复活倒数",
+    "BountyEXP": "死亡给敌经验值",
+    "Strength": "力量",
+    "Agility": "敏捷",
+    "Intelligence": "智力",
+    "CurrentLevel": "等级",
+    "CurrentEXP": "目前经验值"
+  },
+  "HELLO": "嗨",
+  "TITLE": "AON UI 簡體中文"
+}
